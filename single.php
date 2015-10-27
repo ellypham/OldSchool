@@ -8,9 +8,8 @@
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
-
           <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
+            <p>  <?php echo get_avatar(get_the_author_email(),'80' ); ?> Posted by <?php the_author() ?> on <?php the_date('D M d') ?>
           </div><!-- .entry-meta -->
 
           <div class="entry-content">

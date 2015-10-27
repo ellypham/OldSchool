@@ -24,6 +24,7 @@
       	if ( get_the_author_meta('description') ) : ?>
 
           <h2>About <?php the_author(); ?> </h2>
+          <?php the_author_image(); ?>
       		<?php echo get_avatar( get_the_author_meta('user_email'), 60); ?>
       		<?php the_author_meta('description'); ?>
 
