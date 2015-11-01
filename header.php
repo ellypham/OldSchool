@@ -7,6 +7,11 @@
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href='https://fonts.googleapis.com/css?family=Biryani:400,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
@@ -19,15 +24,22 @@
 <header>
   <div class="container">
     <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
+      <a href="<?php echo home_url(); ?>" id="logo"><?php bloginfo('name'); ?></a>
     </h1>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
+    <?php wp_nav_menu(array(
+      'container' => 'nav',
+      'container_id' => 'nav',
+      'theme_location' => 'primary'
     )); ?>
   </div> <!-- /.container -->
 </header><!--/.header-->
+
+
+
+
+
+
+
+
 

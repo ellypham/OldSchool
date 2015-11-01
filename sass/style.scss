@@ -13,19 +13,70 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
-/*
-====================================
-Default Styling
-====================================
-*/
+
+
+//FONTSTYLES
+$bodyFont: 'Biryani', sans-serif;
+$logoFont: 'Limelight', cursive;
+
+//COLORS
+
+
+// ====================================
+// Default Styling
+// ====================================
+
+@mixin fontSize($scale) {
+		font-size: $scale * 1px;
+		font-size: ($scale / 10) * 1rem;
+}
 
 img {
 	max-width: 100%;
 }
 
 body {
-	color: #333;
+	// font-family: $bodyFont;
+	color: white; 
+	font-weight: 400;
+	@include fontSize(12);
+	background: url(http://oldschoolyyz.com/wp-content/uploads/2015/06/oldschool_site_bg.jpg);
 }
+
+header{
+	background: url()
+}
+
+// header{
+// 	background: url(assets/images/schoolImage7.jpg);
+// }
+
+h1{
+	@include fontSize(25)
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $logoFont;
+}
+
+a{
+	color: white;
+}
+
+//header navigation menu
+
+li{
+	display: inline-block;
+}
+
+.menu{
+	text-align: center;
+}
+
+.page_item{
+	padding: 20px;
+}
+
 
 .container {
 	max-width: 1200px;
@@ -42,7 +93,21 @@ body {
 	width: 100%;
 }
 
+.logo{
+	color: blue;
+}
 
+
+.main{
+	background: url(assets/images/OldSchool29.jpg) center no-repeat;
+	background-size: 1080px;
+	height: 100vh;
+
+}
+
+// .container{
+// 	background: green;
+// }
 
 
 
